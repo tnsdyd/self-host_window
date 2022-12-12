@@ -22,3 +22,12 @@ jobs:
         with:
           name: testwar
           path: build/build/helloworld-0.1-dev.war  
+
+  scp:
+    name: scp
+    runs-on: self-hosted
+    steps: 
+      - name: test
+        run: |
+          dir
+        shell: cmd

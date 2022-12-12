@@ -1,0 +1,19 @@
+name: window_self_host
+
+on:
+  workflow_dispatch: 
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+
+jobs:
+  in_container_build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build with Ant
+        run: |
+          dir
+          C:\Users\sykwon\Downloads\apache-ant-1.10.12\bin\ant -v

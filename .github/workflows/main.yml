@@ -15,6 +15,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build with Ant
         run: |
-          ls
-          Set-ExecutionPolicy Unrestricted
-          C:\Users\sykwon\Downloads\apache-ant-1.10.12\bin\ant -v
+          cmd ls
+          cmd C:\Users\sykwon\Downloads\apache-ant-1.10.12\bin\ant -v

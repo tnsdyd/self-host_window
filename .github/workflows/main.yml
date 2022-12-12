@@ -16,5 +16,5 @@ jobs:
       - name: Build with Ant
         run: |          
           dir
-          C:\Users\sykwon\Downloads\apache-ant-1.10.12\bin\ant -v
+          C:\Users\sykwon\Downloads\apache-ant-1.10.12\bin\ant -noinput -buildfile build/build.xml
         shell: cmd

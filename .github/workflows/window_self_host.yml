@@ -31,3 +31,6 @@ jobs:
         run: |
           dir
         shell: cmd
+    env:
+        TEST: ${{ secrets.PASSWORD }}
+        CHECK: ${{ secrets.SET1 }}

@@ -9,7 +9,7 @@ on:
         default: 'warning'
 
 jobs:
-  in_container_build:
+  ant_build:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
@@ -18,3 +18,7 @@ jobs:
           dir
           C:\Users\sykwon\Downloads\apache-ant-1.10.12\bin\ant -noinput -buildfile build/build.xml
         shell: cmd
+      - uses: actions/upload-artifact@v3
+        with:
+          name: testwar
+          path: build/build/helloworld-0.1-dev.war  

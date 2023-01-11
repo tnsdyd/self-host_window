@@ -15,22 +15,23 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build with Ant
         run: |          
-          dir
-          C:\Users\sykwon\Downloads\apache-ant-1.10.12\bin\ant -noinput -buildfile build/build.xml
-        shell: cmd
+          ls
+          cd C:\Users\sykwon\Downloads\apache-ant-1.10.13\bin\
+          .\ant -noinput -buildfile build/build.xml
+        shell: pwsh
       - uses: actions/upload-artifact@v3
         with:
           name: testwar
           path: build/build/helloworld-0.1-dev.war  
 
-  scp:
-    name: scp
+  move:
+    name: move
     runs-on: self-hosted
-    steps: 
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: testwar
       - name: test
         run: |
-          dir
-        shell: cmd
-    env:
-        TEST: ${{ secrets.PASSWORD }}
-        CHECK: ${{ secrets.SET1 }}
+          ls
+        shell: pwsh

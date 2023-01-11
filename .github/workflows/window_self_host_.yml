@@ -14,11 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build with Ant
+        shell: pwsh
         run: |          
           ls
           cd C:\Users\sykwon\Downloads\apache-ant-1.10.13\bin\
-          .\ant -noinput -buildfile build/build.xml
-        shell: pwsh
+          .\ant -noinput -buildfile C:\Users\sykwon\Documents\actions-runner\_work\self-host_window\self-host_window\build/build.xml       
       - uses: actions/upload-artifact@v3
         with:
           name: testwar
@@ -27,6 +27,7 @@ jobs:
   move:
     name: move
     runs-on: self-hosted
+    needs: ant_build
     steps:
       - uses: actions/download-artifact@v3
         with:

@@ -16,8 +16,8 @@ jobs:
       - name: Build with Ant
         run: |          
           ls
-          #cd C:\Users\sykwon\Downloads\apache-ant-1.10.13\bin\
-          #.\ant -noinput -buildfile C:\Users\sykwon\Documents\actions-runner\_work\self-host_window\self-host_window\build/build.xml       
+          cd C:\Users\sykwon\Downloads\apache-ant-1.10.13\bin\
+          .\ant -noinput -buildfile C:\Users\sykwon\Documents\actions-runner\_work\self-host_window\self-host_window\build/build.xml       
       - uses: actions/upload-artifact@v3
         with:
           name: testwar

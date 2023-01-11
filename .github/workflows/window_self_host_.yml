@@ -34,4 +34,5 @@ jobs:
       - name: test
         run: |
           ls
-        shell: pwsh
+          scp -i C:\Users\sykwon\Documents\key\kwon.pem helloworld-0.1-dev.war kwon@192.168.1.130:/home/kwon/
+

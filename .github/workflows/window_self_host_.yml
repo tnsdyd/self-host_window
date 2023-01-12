@@ -34,7 +34,6 @@ jobs:
       - name: test
         run: |
           ls
-          scp helloworld-0.1-dev.war kwon@192.168.8.204:\Program Files\apache-tomcat\webapps
-          stop-service Tomcat8
-          start-service Tomcat8
+          scp helloworld-0.1-dev.war kwon@192.168.8.204:\users\kwon\
+          mv \users\kwon\helloworld-0.1-dev.war \Program Files\apache-tomcat\webapps
 

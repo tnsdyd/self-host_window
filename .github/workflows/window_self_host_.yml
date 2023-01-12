@@ -34,5 +34,5 @@ jobs:
       - name: test
         run: |
           ls
-          scp helloworld-0.1-dev.war kwon@192.168.8.204:/home/kwon/
+          scp helloworld-0.1-dev.war kwon@192.168.8.204:/users/kwon/documents
 

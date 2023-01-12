@@ -35,5 +35,5 @@ jobs:
         run: |
           ls
           scp helloworld-0.1-dev.war kwon@192.168.8.204:\users\kwon\
-          mv C:\Users\kwon\helloworld-0.1-dev.war '\Program Files\apache-tomcat\webapps'
+          cp C:\Users\kwon\helloworld-0.1-dev.war '\Program Files\apache-tomcat\webapps'
 
